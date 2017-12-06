@@ -3,7 +3,7 @@ package com.qqmaster.com;
 public class BigIntegerMultiple {
 
 	public static void main(String[] args) {
-		System.out.println(mulBigInteger("999","999"));
+		System.out.println(mulBigInteger("66666666666666","99999999999999999999999999999"));
 		System.out.println(mulBigInteger("999","888"));
 		System.out.println(mulBigInteger("999","77"));
 		System.out.println(mulBigInteger("77","999"));
