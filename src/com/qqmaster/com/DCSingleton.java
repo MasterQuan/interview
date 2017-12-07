@@ -1,5 +1,10 @@
 package com.qqmaster.com;
 
+/**
+ * 
+ * @author zhaoshiquan 2017年12月7日 下午5:35:55
+ *
+ */
 public class DCSingleton {
 	private static volatile DCSingleton singleton = null;
 	

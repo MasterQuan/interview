@@ -3,6 +3,11 @@ package com.qqmaster.com;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+/**
+ * 
+ * @author zhaoshiquan 2017年12月7日 下午5:35:51
+ *
+ */
 public class BrotherToBinaryTree {
 	
 	

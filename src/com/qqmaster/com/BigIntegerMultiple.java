@@ -1,5 +1,11 @@
 package com.qqmaster.com;
 
+/**
+ * 
+ * @author zhaoshiquan 2017年12月7日 下午5:35:42
+ *
+ */
+
 public class BigIntegerMultiple {
 
 	public static void main(String[] args) {
