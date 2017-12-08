@@ -17,9 +17,9 @@ public class NumCount {
 	
 	
 	public static void main(String[] args) {
-//		System.out.println(numCount(12,2));
-//		System.out.println(numCount(12,1));
-//		System.out.println(numCount(111111,1));
+		System.out.println(numCount(12,2));
+		System.out.println(numCount(12,1));
+		System.out.println(numCount(111111,1));
 		System.out.println(numCount(321,2));
 		System.out.println(numCount(322,2));
 		System.out.println(numCount(323,2));
@@ -29,7 +29,7 @@ public class NumCount {
 		final int TEN = 10;
 		int count = 0;
 		int factor = 1;
-		for(int div = range/TEN, rem = range % TEN; true;){
+		for(int div = range/TEN, rem = range % TEN; true; rem = div % TEN, div /= TEN, factor *= TEN){
 			if(div == 0){
 				if(rem > num){
 					count += factor;
@@ -40,11 +40,7 @@ public class NumCount {
 			}else{
 				count += (div + (rem >= num ? 1:0)) * factor;
 			}
-			rem = div % TEN;
-			div /= TEN;
-			factor *= TEN;
 		}
-		
 		return count;
 	}
 
