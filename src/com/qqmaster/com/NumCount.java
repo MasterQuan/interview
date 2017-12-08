@@ -28,8 +28,10 @@ public class NumCount {
 	public static int numCount(int range, int num){
 		final int TEN = 10;
 		int count = 0;
-		int factor = 1;
-		for(int div = range/TEN, rem = range % TEN; true; rem = div % TEN, div /= TEN, factor *= TEN){
+		for(int factor = 1, div = range/TEN, rem = range % TEN; 
+				true; 
+				rem = div % TEN, div /= TEN, factor *= TEN){
+			
 			if(div == 0){
 				if(rem > num){
 					count += factor;
