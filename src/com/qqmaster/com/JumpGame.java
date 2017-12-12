@@ -22,11 +22,15 @@ public class JumpGame {
 		int[] b = {2,2,0,0,1,1,1,1,4};
 		int[] c = {2,2,1,0,4};
 		int[] d = {2,2,1,1,0};
+		int[] e = null;
+		int[] f = {0};
 		
 		System.out.println(canJumpToEnd(a));
 		System.out.println(canJumpToEnd(b));
 		System.out.println(canJumpToEnd(c));
 		System.out.println(canJumpToEnd(d));
+		System.out.println(canJumpToEnd(e));
+		System.out.println(canJumpToEnd(f));
 	}
 	
 	public static boolean canJumpToEnd(int[] nums){
