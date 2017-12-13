@@ -47,13 +47,16 @@ public class PeakValue {
 			return locs;
 		
 		for(int loc = 1; loc < nums.length - 1;){
+			//是峰值，加入结果中，跳两格
 			if(nums[loc] > nums[loc - 1] && nums[loc] > nums[loc + 1]){
 				locs.add(loc);
 				loc += 2;
 			}else{
+				//不是峰值，但是不小于下一位，跳两格
 				if(nums[loc] >= nums[loc + 1]){
 					loc += 2;
 				}else{
+					//跳一格
 					loc++;
 				}
 			}
