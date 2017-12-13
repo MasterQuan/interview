@@ -3,6 +3,8 @@ package com.qqmaster.com;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+import com.qqmaster.com.structure.TreeNode;
+
 /**
  * 
  * @author zhaoshiquan 2017年12月7日 下午5:35:51
@@ -10,19 +12,17 @@ import java.util.Queue;
  */
 public class BrotherToBinaryTree {
 	
-	
-	
-	public static Node doBrother(Node t){
-		Queue<Node> q = new ArrayDeque<Node>();
+	public static TreeNode doBrother(TreeNode t){
+		Queue<TreeNode> q = new ArrayDeque<TreeNode>();
 		if(t == null){
 			q.add(t);
 		}else {
 			return t;
 		}
 		
-		Node nt = new Node();
+		TreeNode nt = new TreeNode();
 		while(!q.isEmpty()){
-			Node mid = q.poll();
+			TreeNode mid = q.poll();
 			nt.brother = mid;
 			
 			if(mid.left != null){
@@ -38,8 +38,3 @@ public class BrotherToBinaryTree {
 	}
 }
 
-class Node{
-	public Node right;
-	public Node left;
-	public Node brother;
-}

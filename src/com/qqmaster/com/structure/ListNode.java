@@ -1,4 +1,4 @@
-package com.qqmaster.com;
+package com.qqmaster.com.structure;
 
 public class ListNode {
 	public ListNode next;

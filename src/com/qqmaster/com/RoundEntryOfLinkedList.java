@@ -1,5 +1,7 @@
 package com.qqmaster.com;
 
+import com.qqmaster.com.structure.ListNode;
+
 public class RoundEntryOfLinkedList {
 	
 	public ListNode getRoundEntryOfLinkedList(ListNode list){

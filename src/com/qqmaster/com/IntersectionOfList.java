@@ -1,5 +1,7 @@
 package com.qqmaster.com;
 
+import com.qqmaster.com.structure.ListNode;
+
 /**
  * 请写一个程序，找到两个单链表最开始的交叉节点。
  * 注意事项
