@@ -12,10 +12,12 @@ public class MaxIntegerFactorial {
 	
 	public static String maxIntegerFactorial(int num){
 		StringBuilder sb = new StringBuilder("1");
+		//异常处理，默认返回结果为1
 		if(num <=1){
 			return sb.toString();
 		}
 		
+		//用字符串表示结果
 		for(int i = 2, carry = 0; i <= num; i++){
 			StringBuilder sbm = new StringBuilder();
 			
@@ -30,7 +32,6 @@ public class MaxIntegerFactorial {
 			}
 			sb = sbm;
 		}
-		
 		sb.reverse();
 		return sb.toString();
 	}
