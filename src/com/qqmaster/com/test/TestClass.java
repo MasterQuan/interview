@@ -22,9 +22,14 @@ public class TestClass {
 //		System.out.println(36*36);
 //		System.out.println((int) Math.sqrt(sum1));
 		
-		System.out.println(335*335 + 336*336);
-		System.out.println(335*335 + 337*337);
-		System.out.println(335*335 + 4444*4444);
-				
+//		System.out.println(335*335 + 336*336);
+//		System.out.println(335*335 + 337*337);
+//		System.out.println(335*335 + 4444*4444);
+		
+		int a = 13, b = 14;
+		a ^= b;
+		b ^= a;
+		a ^= b;
+		System.out.println(a + "   " + b);
 	}
 }
