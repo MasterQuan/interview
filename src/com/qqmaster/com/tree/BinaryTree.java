@@ -36,6 +36,12 @@ public class BinaryTree {
 //		System.out.println("中序遍历（非递归）--->");
 //		inOrderTraverse2(root);
 		
+		//二叉树的高度
+//		System.out.println(getHeight(root));
+		
+		//是否平衡二叉树
+		System.out.println(isBalanceTree(root));
+		
 		
 	}
 
@@ -139,9 +145,23 @@ public class BinaryTree {
 
 	}
 
+	//获取二叉树的深度
+	public static int getHeight(TreeNode root){
+		if(root == null) return 0;
+		return Math.max(getHeight(root.left), getHeight(root.right)) + 1;
+	}
+	
 	//判断平衡二叉树
-
-	//二叉排序树
+	public static boolean isBalanceTree(TreeNode root){
+		if(root == null)
+			return true;
+		int diffHeight = Math.abs(getHeight(root.left) - getHeight(root.right));
+		if(diffHeight > 1){
+			return false;
+		}else return isBalanceTree(root.left) && isBalanceTree(root.right);
+	}
+	
+	//构建二叉排序树
 
 	//AVL树
 
