@@ -161,7 +161,23 @@ public class BinaryTree {
 		}else return isBalanceTree(root.left) && isBalanceTree(root.right);
 	}
 	
-	//构建二叉排序树
+	//构建完全二叉树	
+	public static TreeNode buildCompleteTree(int[] nums){
+		if(nums == null || nums.length < 1)
+			return null;
+		int count = nums.length;
+		TreeNode[] nodes = new TreeNode[count];
+		for(int i = 0; i < count; i++){
+			nodes[i] = new TreeNode(nums[i]);
+		}
+		for(int temp = 0; temp <= (nums.length - 2) / 2; temp++){
+			if(temp << 1 + 1 < nums.length)
+				nodes[temp].left = nodes[temp << 1 + 1];
+			if(temp << 1 + 2 < nums.length)
+				nodes[temp].right = nodes[temp << 1 + 2];
+		}
+		return nodes[0];
+	}
 
 	//AVL树
 
