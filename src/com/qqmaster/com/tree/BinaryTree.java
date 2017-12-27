@@ -224,5 +224,12 @@ public class BinaryTree {
     }
 
 	//镜像二叉树
-	
+	public static void Mirror(TreeNode root) {
+        if(root == null || (root.left == null && root.right==null)) return ;
+        TreeNode tnode = root.left;
+        root.left = root.right;
+        root.right = tnode;
+        Mirror(root.left);
+        Mirror(root.right);
+    }
 }
