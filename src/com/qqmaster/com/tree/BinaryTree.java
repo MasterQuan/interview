@@ -160,6 +160,28 @@ public class BinaryTree {
 			return false;
 		}else return isBalanceTree(root.left) && isBalanceTree(root.right);
 	}
+	//判断平衡二叉树2
+	
+	public static boolean isBalanceTree2(TreeNode root){
+		if(getDepth(root) == -1){
+            return false;
+        }return true;
+	}
+	
+	private static int getDepth(TreeNode root){
+        if(root == null) return 0;
+        
+        int leftDepth = getDepth(root.left);
+        if(leftDepth == -1) return -1;
+        
+        int rightDepth = getDepth(root.right);
+        if(rightDepth == -1) return -1;
+        
+        if(Math.abs(rightDepth - leftDepth) > 1){ 
+            return -1;
+        }else return Math.max(rightDepth, leftDepth) + 1;
+    }
+
 	
 	//构建完全二叉树	
 	public static TreeNode buildCompleteTree(int[] nums){
@@ -182,7 +204,25 @@ public class BinaryTree {
 	//AVL树
 
 	//堆
-
 	
+	//是否是对称树
+	public static boolean isSymmetrical(TreeNode root){
+		if(root == null)
+			return true;
+		return sameNode(root.left, root.brother.right);
+	}
+ 	
+	private static boolean sameNode(TreeNode pRoot, TreeNode qRoot){
+        if( pRoot == null && qRoot == null) return true;
+        if( pRoot == null && qRoot != null) return false;
+        if( pRoot != null && qRoot == null) return false;
+        
+        if(pRoot.value == qRoot.value){
+            return sameNode(pRoot.right, qRoot.left) && sameNode(qRoot.right, pRoot.left);
+        }else 
+        	return false;
+    }
 
+	//镜像二叉树
+	
 }
