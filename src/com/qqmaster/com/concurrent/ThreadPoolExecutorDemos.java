@@ -8,10 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadPoolExecutorDemos {
 	public static void main(String[] args) {
-//		newCachedThreadPoolDemos();
+		newCachedThreadPoolDemos();
 //		newFixedThreadPoolDemos();
 //		newSingleThreadExecutorDemos();
-		newScheduledThreadPoolDemos();
+//		newScheduledThreadPoolDemos();
 	}
 	
 	
@@ -31,18 +31,22 @@ public class ThreadPoolExecutorDemos {
 //			}catch (InterruptedException e) {
 //				e.printStackTrace();
 //			}
-			pool.execute(()->{
-				System.out.println("execute->" + index);
+			pool.submit(()->{
+				System.out.println("submit->" + index);
+				return null;
 			});
+//			pool.execute(()->{
+//				System.out.println("execute->" + index);
+//			});
 		}
 		System.out.println("------------------------------");
 		
-		for(int i = 0; i < 10; i++){
-			final int index = i;
-			pool.submit(()->{
-				System.out.println("submit->" + index);
-			});
-		}
+//		for(int i = 0; i < 10; i++){
+//			final int index = i;
+//			pool.submit(()->{
+//				System.out.println("submit->" + index);
+//			});
+//		}
 		pool.shutdown();
 		pool.shutdownNow();
 		System.out.println("isShutdown: " + pool.isShutdown());
