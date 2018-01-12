@@ -27,35 +27,39 @@ public class InterThreadCommunicationDemos {
 //		
 //	}
 	
-	public static void main(String[] args) throws InterruptedException {
-		WaitAndNotifyDemos blockQueue = new WaitAndNotifyDemos();
-		Thread t1 = new Thread(()->{
-			for(int i = 1; i<=15; i++){
-				try {
-					blockQueue.push(i);
-					System.out.println("push " + i);
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
+//	public static void main(String[] args) throws InterruptedException {
+//		WaitAndNotifyDemos blockQueue = new WaitAndNotifyDemos();
+//		Thread t1 = new Thread(()->{
+//			for(int i = 1; i<=15; i++){
+//				try {
+//					blockQueue.push(i);
+//					System.out.println("push " + i);
+//					Thread.sleep(500);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//		
+//		Thread t2 = new Thread(()->{
+//			for(int i = 1; i <=10; i++){
+//				try {
+//					System.out.println("pop " + blockQueue.pop());
+//					Thread.sleep(1500);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//		
+//		t1.start(); 
+//		t2.start(); 
+//	}
+	
+	public static void main(String[] args) {
 		
-		Thread t2 = new Thread(()->{
-			for(int i = 1; i <=10; i++){
-				try {
-					System.out.println("pop " + blockQueue.pop());
-					Thread.sleep(1500);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
-		
-		t1.start(); 
-		t2.start(); 
 	}
 	
 }
