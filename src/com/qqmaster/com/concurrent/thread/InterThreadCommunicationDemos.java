@@ -59,7 +59,6 @@ public class InterThreadCommunicationDemos {
 //	}
 	
 	public static void main(String[] args) {
-		
 	}
 	
 }
