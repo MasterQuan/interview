@@ -1,4 +1,4 @@
-package com.qqmaster.com.machineLearning;
+package com.qqmaster.com.machineLearning.node;
 
 import java.util.Arrays;
 
@@ -6,6 +6,7 @@ public class DataNode {
 	private String id;
 	private double[] features;
 	private String label;
+	public static String attNames;
 	
 	public DataNode(){}
 	

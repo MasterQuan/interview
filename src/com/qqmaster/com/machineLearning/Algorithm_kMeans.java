@@ -3,6 +3,8 @@ package com.qqmaster.com.machineLearning;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.qqmaster.com.machineLearning.node.DataNode;
+
 /**
  * K-Means Clustering:
  * step: 1. random choose k samples as center of each Clustering.
