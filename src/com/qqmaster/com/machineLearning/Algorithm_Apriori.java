@@ -50,6 +50,10 @@ public class Algorithm_Apriori {
 		boolean[] f8 = {true,true,true,false,false};
 		d8.setFeatures(f8);
 		
+		AprioriNode d9 = new AprioriNode();
+		boolean[] f9 = {true,false,true,false,true};
+		d9.setFeatures(f9);
+		
 		data.add(d0);
 		data.add(d1);
 		data.add(d2);
@@ -59,6 +63,8 @@ public class Algorithm_Apriori {
 		data.add(d6);
 		data.add(d7);
 		data.add(d8);
+		data.add(d9);
+		
 		for(double support = 0.1;support <= 0.9; support += 0.1){
 			System.out.println("support -> " + support);
 			Algorithm_Apriori apriori = new Algorithm_Apriori();
